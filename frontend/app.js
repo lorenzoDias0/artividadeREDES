@@ -2,10 +2,9 @@ document.addEventListener('DOMContentLoaded', function() {
     const form = document.getElementById('habilidadeForm');
     const habilidadesList = document.getElementById('habilidadesList');
     
-    // URL base da API - ajuste conforme seu ambiente
-    const API_URL = window.location.hostname === 'localhost' 
-    ? 'http://localhost:8000' 
-    : 'http://backend:8000';
+    // Usa o hostname atual da página e porta 8000 para a API
+    const API_URL = `http://${window.location.hostname}:8000`;
+    
     // Carrega habilidades ao carregar a página
     carregarHabilidades();
     
